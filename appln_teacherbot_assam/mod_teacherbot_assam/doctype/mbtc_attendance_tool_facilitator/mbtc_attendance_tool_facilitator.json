@@ -1,0 +1,129 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-03 13:34:17.886555",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "district",
+  "block",
+  "column_break_lk9a",
+  "name_of_the_facilitator",
+  "training_date",
+  "section_break_xxv9",
+  "total_no_of_participants_enrolled",
+  "total_no_of_participants_attended",
+  "column_break_5saw",
+  "total_number_of_facilitators_facilitation_team_enrolled",
+  "total_number_of_facilitators_facilitation_team_attended",
+  "section_break_0uh0",
+  "remarks_if_any"
+ ],
+ "fields": [
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "District",
+   "options": "MBTC_AS_District",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.district",
+   "fieldname": "block",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Block",
+   "options": "MBTC_AS_Block",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_lk9a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "name_of_the_facilitator",
+   "fieldtype": "Data",
+   "label": "Name of the Facilitator",
+   "reqd": 1
+  },
+  {
+   "fieldname": "training_date",
+   "fieldtype": "Date",
+   "label": "Training Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_xxv9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_no_of_participants_enrolled",
+   "fieldtype": "Int",
+   "label": "Total no of Participants enrolled",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_no_of_participants_attended",
+   "fieldtype": "Int",
+   "label": "Total no of participants attended",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5saw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_number_of_facilitators_facilitation_team_enrolled",
+   "fieldtype": "Int",
+   "label": "Total Number of facilitators/facilitation team enrolled",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_number_of_facilitators_facilitation_team_attended",
+   "fieldtype": "Int",
+   "label": "Total Number of facilitators/facilitation team attended",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_0uh0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remarks_if_any",
+   "fieldtype": "Small Text",
+   "label": "Remarks (If any)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-11-09 17:18:19.693231",
+ "modified_by": "Administrator",
+ "module": "Mod TeacherBot Assam",
+ "name": "MBTC_Attendance Tool Facilitator",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
