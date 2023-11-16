@@ -1,7 +1,7 @@
 // Copyright (c) 2023, Magic Bus and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on("MBTC_Pre Post Assessment Tool", {
+frappe.ui.form.on("MBTC_Pre Assessment Tool", {
 	setup(frm) {
         frm.set_query('block_name', () => {
             return {

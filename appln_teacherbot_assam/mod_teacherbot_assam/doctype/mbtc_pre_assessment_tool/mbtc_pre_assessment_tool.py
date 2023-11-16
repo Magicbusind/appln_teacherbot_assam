@@ -6,7 +6,7 @@ from frappe.model.document import Document
 from frappe.utils import now
 
 
-class MBTC_PrePostAssessmentTool(Document):
+class MBTC_PreAssessmentTool(Document):
 	def before_insert(self):
 		self.docstatus = 1 
 		self.end = None

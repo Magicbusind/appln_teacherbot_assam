@@ -7,16 +7,19 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "training_date",
   "column_break_3zoy",
   "district",
   "block",
+  "school_name",
   "section_break_v2np",
   "participant_name",
   "participant_emp_id",
+  "phone_number",
   "column_break_eflq",
   "designation",
-  "attendance_status"
+  "batch_no",
+  "attendance_status",
+  "training_date"
  ],
  "fields": [
   {
@@ -81,11 +84,31 @@
    "label": "Attendance Status",
    "options": "\nPresent\nAbsent",
    "reqd": 1
+  },
+  {
+   "fieldname": "school_name",
+   "fieldtype": "Link",
+   "label": "School_Name",
+   "options": "MBTC_AS_School",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "batch_no",
+   "fieldtype": "Select",
+   "label": "Batch No",
+   "options": "\nBatch 1\nBatch 2\nBatch 3\nBatch 4\nBatch 5",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-09 17:18:32.004133",
+ "modified": "2023-11-16 12:28:37.419497",
  "modified_by": "Administrator",
  "module": "Mod TeacherBot Assam",
  "name": "MBTC_Attendance Tool Participant",

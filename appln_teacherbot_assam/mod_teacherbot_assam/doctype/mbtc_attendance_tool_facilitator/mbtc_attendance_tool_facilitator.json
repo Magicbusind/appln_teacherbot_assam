@@ -9,9 +9,11 @@
  "field_order": [
   "district",
   "block",
+  "employee_id",
   "column_break_lk9a",
   "name_of_the_facilitator",
   "training_date",
+  "phone_number",
   "section_break_xxv9",
   "total_no_of_participants_enrolled",
   "total_no_of_participants_attended",
@@ -99,11 +101,22 @@
    "fieldname": "remarks_if_any",
    "fieldtype": "Small Text",
    "label": "Remarks (If any)"
+  },
+  {
+   "fieldname": "employee_id",
+   "fieldtype": "Int",
+   "label": "Employee ID"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-09 17:18:19.693231",
+ "modified": "2023-11-16 12:14:54.423906",
  "modified_by": "Administrator",
  "module": "Mod TeacherBot Assam",
  "name": "MBTC_Attendance Tool Facilitator",
