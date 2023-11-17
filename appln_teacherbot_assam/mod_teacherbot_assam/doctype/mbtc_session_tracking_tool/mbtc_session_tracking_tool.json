@@ -286,7 +286,8 @@
    "fieldname": "required_material_available_for_the_session",
    "fieldtype": "Select",
    "label": "Required material available for the session ",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "adequate_space_available_to_conduct_the_activities",
@@ -318,7 +319,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-11-16 18:09:41.784318",
+ "modified": "2023-11-17 09:45:50.593285",
  "modified_by": "Administrator",
  "module": "Mod TeacherBot Assam",
  "name": "MBTC_Session Tracking Tool",
