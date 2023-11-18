@@ -40,7 +40,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "District",
-   "options": "MBTC AS Master District",
+   "options": "MBTC_AS_Master_District",
    "reqd": 1
   },
   {
@@ -49,7 +49,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Block",
-   "options": "MBTC AS Master Block",
+   "options": "MBTC_AS_Master_Block",
    "reqd": 1
   },
   {
@@ -91,7 +91,7 @@
    "fieldname": "school_name",
    "fieldtype": "Link",
    "label": "School_Name",
-   "options": "MBTC AS Master School",
+   "options": "MBTC_AS_Master_School",
    "reqd": 1
   },
   {
@@ -123,7 +123,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-17 14:54:27.729490",
+ "modified": "2023-11-18 15:28:40.661977",
  "modified_by": "Administrator",
  "module": "Mod TeacherBot Assam",
  "name": "MBTC_Attendance Tool Participant",

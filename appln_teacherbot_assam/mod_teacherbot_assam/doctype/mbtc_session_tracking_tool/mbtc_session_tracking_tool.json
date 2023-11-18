@@ -15,14 +15,15 @@
   "section_break_dasx",
   "district_name",
   "class",
+  "contact_number_of_teacher_whatsapp_number_preferable",
   "column_break_wtuk",
   "block_name",
-  "teacher_name_and_emp_id",
-  "contact_number_of_teacher_whatsapp_number_preferable",
-  "teacher_subject_you_teach",
+  "emp_id",
+  "section",
   "column_break_lpjf",
   "school_name_and_code",
-  "section",
+  "teacher_name",
+  "teacher_subject_you_teach",
   "section_break_rxim",
   "session_planned_in_month",
   "column_break_iffd",
@@ -106,13 +107,6 @@
    "in_list_view": 1,
    "label": "Block Name",
    "options": "MBTC_AS_Master_Block",
-   "reqd": 1
-  },
-  {
-   "fieldname": "teacher_name_and_emp_id",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Teacher Name and Emp ID",
    "reqd": 1
   },
   {
@@ -320,12 +314,25 @@
   {
    "fieldname": "column_break_quhb",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "emp_id",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Emp ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "teacher_name",
+   "fieldtype": "Data",
+   "label": "Teacher Name",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-11-18 14:10:07.798654",
+ "modified": "2023-11-18 15:40:40.873895",
  "modified_by": "Administrator",
  "module": "Mod TeacherBot Assam",
  "name": "MBTC_Session Tracking Tool",
