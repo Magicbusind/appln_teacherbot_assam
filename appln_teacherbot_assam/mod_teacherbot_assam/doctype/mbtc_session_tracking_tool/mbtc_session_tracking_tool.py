@@ -12,7 +12,7 @@ class MBTC_SessionTrackingTool(Document):
 		if self.session_planned_in_month == 0:
 			frappe.throw(f"""    No. of session planned in the month Cannot be zero         """)
 
-		no_of_session_planned_in_the_month = frappe.db.get_value('TeacherBot Haryana Settings','TeacherBot Haryana Settings',['session_planned_in_month'])
+		no_of_session_planned_in_the_month = frappe.db.get_value('TeacherBot Assam Settings','TeacherBot Assam Settings',['session_planned_in_month'])
 
 		if no_of_session_planned_in_the_month and (int(no_of_session_planned_in_the_month) <= int(self.session_planned_in_month)):
 			frappe.throw(f"Please note that there are only {no_of_session_planned_in_the_month} sessions planned for {self.school_name_and_code} in the current month.")
@@ -20,7 +20,7 @@ class MBTC_SessionTrackingTool(Document):
 		self.end = None
 
 	def validate(self):
-		no_of_session_planned_in_the_month = frappe.db.get_value('TeacherBot Haryana Settings','TeacherBot Haryana Settings',['session_planned_in_month'])
+		no_of_session_planned_in_the_month = frappe.db.get_value('TeacherBot Assam Settings','TeacherBot Assam Settings',['session_planned_in_month'])
 
 		if int(no_of_session_planned_in_the_month) <= int(self.session_planned_in_month):
 			frappe.throw(f"Please note that there are only {no_of_session_planned_in_the_month} sessions planned for {self.school_name_and_code} in the current month.")

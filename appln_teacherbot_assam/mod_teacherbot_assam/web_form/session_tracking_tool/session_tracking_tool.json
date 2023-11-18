@@ -18,7 +18,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2023-11-16 10:38:51.422801",
+ "modified": "2023-11-18 14:58:29.154781",
  "modified_by": "Administrator",
  "module": "Mod TeacherBot Assam",
  "name": "session-tracking-tool",
@@ -49,7 +49,7 @@
    "label": "District Name",
    "max_length": 0,
    "max_value": 0,
-   "options": "MBTC_AS_District",
+   "options": "MBTC_AS_Master_District",
    "read_only": 0,
    "reqd": 1,
    "show_in_filter": 0
@@ -62,7 +62,7 @@
    "label": "Class",
    "max_length": 0,
    "max_value": 0,
-   "options": "MBTC_AS_Class",
+   "options": "MBTC_AS_Master_Class",
    "read_only": 0,
    "reqd": 1,
    "show_in_filter": 0
@@ -82,12 +82,12 @@
    "allow_read_on_all_link_options": 0,
    "depends_on": "eval:doc.district_name",
    "fieldname": "block_name",
-   "fieldtype": "Link",
+   "fieldtype": "Select",
    "hidden": 0,
    "label": "Block Name",
    "max_length": 0,
    "max_value": 0,
-   "options": "MBTC_AS_Block",
+   "options": "",
    "read_only": 0,
    "reqd": 1,
    "show_in_filter": 0
@@ -126,7 +126,7 @@
    "max_value": 0,
    "options": "\nPET\nOther Subject",
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -149,7 +149,7 @@
    "label": "School Name and Code",
    "max_length": 0,
    "max_value": 0,
-   "options": "MBTC_AS_School",
+   "options": "MBTC_AS_Master_School",
    "read_only": 0,
    "reqd": 1,
    "show_in_filter": 0
@@ -162,45 +162,6 @@
    "label": "Section",
    "max_length": 0,
    "max_value": 0,
-   "read_only": 0,
-   "reqd": 0,
-   "show_in_filter": 0
-  },
-  {
-   "allow_read_on_all_link_options": 0,
-   "fieldname": "required_material_available_for_the_session",
-   "fieldtype": "Select",
-   "hidden": 0,
-   "label": "Required material available for the session ",
-   "max_length": 0,
-   "max_value": 0,
-   "options": "\nYes\nNo",
-   "read_only": 0,
-   "reqd": 0,
-   "show_in_filter": 0
-  },
-  {
-   "allow_read_on_all_link_options": 0,
-   "fieldname": "adequate_space_available_to_conduct_the_activities",
-   "fieldtype": "Select",
-   "hidden": 0,
-   "label": "Adequate space available to conduct the activities",
-   "max_length": 0,
-   "max_value": 0,
-   "options": "\nYes\nNo",
-   "read_only": 0,
-   "reqd": 0,
-   "show_in_filter": 0
-  },
-  {
-   "allow_read_on_all_link_options": 0,
-   "fieldname": "rules_regulation_and_safety_guidelines_provided_to_participants",
-   "fieldtype": "Select",
-   "hidden": 0,
-   "label": "Rules, regulation and safety guidelines provided to participants",
-   "max_length": 0,
-   "max_value": 0,
-   "options": "\nYes\nNo",
    "read_only": 0,
    "reqd": 0,
    "show_in_filter": 0
@@ -247,7 +208,7 @@
    "label": "Session Code",
    "max_length": 0,
    "max_value": 0,
-   "options": "MBTC_AS_Session Code",
+   "options": "MBTC_AS_Master_Session Code",
    "read_only": 0,
    "reqd": 1,
    "show_in_filter": 0
@@ -312,7 +273,7 @@
   },
   {
    "allow_read_on_all_link_options": 0,
-   "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session Held'\n",
+   "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'",
    "fieldname": "session_held_date",
    "fieldtype": "Date",
    "hidden": 0,
@@ -343,7 +304,7 @@
    "label": "Reason for postponing",
    "max_length": 0,
    "max_value": 0,
-   "options": "MBTC_Postponed Reason",
+   "options": "MBTC_AS_Master_Postponed Reason",
    "read_only": 0,
    "reqd": 0,
    "show_in_filter": 0
@@ -389,11 +350,11 @@
    "fieldname": "girls_enrolled_in_class",
    "fieldtype": "Int",
    "hidden": 0,
-   "label": "Total girls enrolled in the class",
+   "label": "Total girls enrolled in the class ",
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 1,
+   "reqd": 0,
    "show_in_filter": 0
   },
   {
@@ -406,7 +367,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 1,
+   "reqd": 0,
    "show_in_filter": 0
   },
   {
@@ -419,7 +380,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 1,
+   "reqd": 0,
    "show_in_filter": 0
   },
   {
@@ -443,12 +404,12 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 1,
+   "reqd": 0,
    "show_in_filter": 0
   },
   {
    "allow_read_on_all_link_options": 0,
-   "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n",
+   "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session postponed'\n",
    "fieldname": "if_postponed__what_is_the_updated_planned_date",
    "fieldtype": "Date",
    "hidden": 0,
@@ -456,7 +417,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 1,
+   "reqd": 0,
    "show_in_filter": 0
   },
   {
@@ -469,7 +430,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 1,
+   "reqd": 0,
    "show_in_filter": 0
   },
   {
@@ -483,6 +444,78 @@
    "max_value": 0,
    "read_only": 0,
    "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "section_break_sd5q",
+   "fieldtype": "Section Break",
+   "hidden": 0,
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "required_material_available_for_the_session",
+   "fieldtype": "Select",
+   "hidden": 0,
+   "label": "Required material available for the session ",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "\nYes\nNo",
+   "read_only": 0,
+   "reqd": 1,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "column_break_b0xv",
+   "fieldtype": "Column Break",
+   "hidden": 0,
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "adequate_space_available_to_conduct_the_activities",
+   "fieldtype": "Select",
+   "hidden": 0,
+   "label": "Adequate space available to conduct the activities",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "\nYes\nNo",
+   "read_only": 0,
+   "reqd": 1,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "column_break_quhb",
+   "fieldtype": "Column Break",
+   "hidden": 0,
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "rules_regulation_and_safety_guidelines_provided_to_participants",
+   "fieldtype": "Select",
+   "hidden": 0,
+   "label": "Rules, regulation and safety guidelines provided to participants",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "\nYes\nNo",
+   "read_only": 0,
+   "reqd": 1,
    "show_in_filter": 0
   }
  ]

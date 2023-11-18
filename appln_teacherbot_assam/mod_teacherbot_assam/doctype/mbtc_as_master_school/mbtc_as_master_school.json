@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{school_code}-{school_name}",
+ "creation": "2023-11-17 22:23:40.775648",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "district",
+  "column_break_o0qd",
+  "block",
+  "section_break_z6kz",
+  "school_code",
+  "school_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "District",
+   "options": "MBTC_AS_Master_District",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_o0qd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "block",
+   "fieldtype": "Link",
+   "label": "Block",
+   "options": "MBTC_AS_Master_Block",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_z6kz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "school_code",
+   "fieldtype": "Data",
+   "label": "School Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "school_name",
+   "fieldtype": "Data",
+   "label": "School Name",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-11-17 22:26:45.890311",
+ "modified_by": "Administrator",
+ "module": "Mod TeacherBot Assam",
+ "name": "MBTC_AS_Master_School",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

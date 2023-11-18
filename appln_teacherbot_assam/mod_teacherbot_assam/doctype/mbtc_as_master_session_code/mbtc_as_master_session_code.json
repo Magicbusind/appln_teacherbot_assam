@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{session_code}-{session_name}",
+ "creation": "2023-11-17 22:20:48.236025",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "session_code",
+  "column_break_zut9",
+  "session_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "session_code",
+   "fieldtype": "Data",
+   "label": "Session Code"
+  },
+  {
+   "fieldname": "column_break_zut9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "session_name",
+   "fieldtype": "Data",
+   "label": "Session Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-11-17 22:22:17.693847",
+ "modified_by": "Administrator",
+ "module": "Mod TeacherBot Assam",
+ "name": "MBTC_AS_Master_Session Code",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

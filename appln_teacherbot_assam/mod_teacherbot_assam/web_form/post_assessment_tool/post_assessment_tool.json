@@ -19,7 +19,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2023-11-16 11:50:28.436422",
+ "modified": "2023-11-17 15:00:47.781117",
  "modified_by": "Administrator",
  "module": "Mod TeacherBot Assam",
  "name": "post-assessment-tool",
@@ -64,7 +64,7 @@
    "label": "District Name",
    "max_length": 0,
    "max_value": 0,
-   "options": "MBTC_AS_District",
+   "options": "MBTC AS Master District",
    "read_only": 0,
    "reqd": 1,
    "show_in_filter": 0
@@ -78,7 +78,7 @@
    "label": "Block Name",
    "max_length": 0,
    "max_value": 0,
-   "options": "MBTC_AS_Block",
+   "options": "MBTC AS Master Block",
    "read_only": 0,
    "reqd": 1,
    "show_in_filter": 0
@@ -92,7 +92,7 @@
    "label": "School Name and Code",
    "max_length": 0,
    "max_value": 0,
-   "options": "MBTC_AS_School",
+   "options": "MBTC AS Master School",
    "read_only": 0,
    "reqd": 1,
    "show_in_filter": 0
@@ -143,7 +143,7 @@
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,
-   "reqd": 1,
+   "reqd": 0,
    "show_in_filter": 0
   },
   {

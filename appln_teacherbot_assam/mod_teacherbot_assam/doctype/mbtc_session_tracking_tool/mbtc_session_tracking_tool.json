@@ -23,9 +23,6 @@
   "column_break_lpjf",
   "school_name_and_code",
   "section",
-  "required_material_available_for_the_session",
-  "adequate_space_available_to_conduct_the_activities",
-  "rules_regulation_and_safety_guidelines_provided_to_participants",
   "section_break_rxim",
   "session_planned_in_month",
   "column_break_iffd",
@@ -49,6 +46,12 @@
   "if_postponed__what_is_the_updated_planned_date",
   "boys_attended_headcount",
   "duration_of_the_session_in_minutes",
+  "section_break_sd5q",
+  "required_material_available_for_the_session",
+  "column_break_b0xv",
+  "adequate_space_available_to_conduct_the_activities",
+  "column_break_quhb",
+  "rules_regulation_and_safety_guidelines_provided_to_participants",
   "amended_from"
  ],
  "fields": [
@@ -81,7 +84,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "District Name",
-   "options": "MBTC_AS_District",
+   "options": "MBTC_AS_Master_District",
    "reqd": 1
   },
   {
@@ -89,7 +92,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Class",
-   "options": "MBTC_AS_Class",
+   "options": "MBTC_AS_Master_Class",
    "reqd": 1
   },
   {
@@ -102,7 +105,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Block Name",
-   "options": "MBTC_AS_Block",
+   "options": "MBTC_AS_Master_Block",
    "reqd": 1
   },
   {
@@ -121,7 +124,7 @@
    "fieldname": "school_name_and_code",
    "fieldtype": "Link",
    "label": "School Name and Code",
-   "options": "MBTC_AS_School",
+   "options": "MBTC_AS_Master_School",
    "reqd": 1
   },
   {
@@ -149,7 +152,7 @@
    "fieldtype": "Link",
    "label": "Session Code",
    "non_negative": 1,
-   "options": "MBTC_AS_Session Code",
+   "options": "MBTC_AS_Master_Session Code",
    "reqd": 1
   },
   {
@@ -167,7 +170,7 @@
    "fieldtype": "Section Break"
   },
   {
-   "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session Held'\n",
+   "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'",
    "fieldname": "session_held_date",
    "fieldtype": "Date",
    "label": "Session Held Date"
@@ -180,25 +183,19 @@
    "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n",
    "fieldname": "girls_enrolled_in_class",
    "fieldtype": "Int",
-   "label": "Total girls enrolled in the class ",
-   "non_negative": 1,
-   "reqd": 1
+   "label": "Total girls enrolled in the class "
   },
   {
    "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n",
    "fieldname": "girls_attended_headcount",
    "fieldtype": "Int",
-   "label": "No. of girls attended the session headcount",
-   "non_negative": 1,
-   "reqd": 1
+   "label": "No. of girls attended the session headcount"
   },
   {
    "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n",
    "fieldname": "students_completed_magicsheets",
    "fieldtype": "Int",
-   "label": "No. of students who completed the Magicsheets",
-   "non_negative": 1,
-   "reqd": 1
+   "label": "No. of students who completed the Magicsheets"
   },
   {
    "fieldname": "column_break_rlkm",
@@ -208,17 +205,13 @@
    "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n",
    "fieldname": "boys_enrolled_in_class",
    "fieldtype": "Int",
-   "label": "Total boys enrolled in the class",
-   "non_negative": 1,
-   "reqd": 1
+   "label": "Total boys enrolled in the class"
   },
   {
    "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n",
    "fieldname": "boys_attended_headcount",
    "fieldtype": "Int",
-   "label": "No. of boys attended the session headcount",
-   "non_negative": 1,
-   "reqd": 1
+   "label": "No. of boys attended the session headcount"
   },
   {
    "fieldname": "amended_from",
@@ -266,14 +259,13 @@
    "fieldname": "reason_for_postponing",
    "fieldtype": "Link",
    "label": "Reason for postponing",
-   "options": "MBTC_Postponed Reason"
+   "options": "MBTC_AS_Master_Postponed Reason"
   },
   {
-   "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n",
+   "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session postponed'\n",
    "fieldname": "if_postponed__what_is_the_updated_planned_date",
    "fieldtype": "Date",
-   "label": "If postponed , what is the updated planned date",
-   "reqd": 1
+   "label": "If postponed , what is the updated planned date"
   },
   {
    "fieldname": "teacher_subject_you_teach",
@@ -293,13 +285,15 @@
    "fieldname": "adequate_space_available_to_conduct_the_activities",
    "fieldtype": "Select",
    "label": "Adequate space available to conduct the activities",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "rules_regulation_and_safety_guidelines_provided_to_participants",
    "fieldtype": "Select",
    "label": "Rules, regulation and safety guidelines provided to participants",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "depends_on": "eval: doc.reason_for_postponing == 'Any other'\n",
@@ -314,12 +308,24 @@
   {
    "fieldname": "column_break_0j0l",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_sd5q",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_b0xv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_quhb",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-11-17 09:45:50.593285",
+ "modified": "2023-11-18 14:10:07.798654",
  "modified_by": "Administrator",
  "module": "Mod TeacherBot Assam",
  "name": "MBTC_Session Tracking Tool",

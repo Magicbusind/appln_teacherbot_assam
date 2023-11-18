@@ -15,11 +15,13 @@
   "participant_name",
   "participant_emp_id",
   "phone_number",
+  "training_date",
   "column_break_eflq",
   "designation",
   "batch_no",
   "attendance_status",
-  "training_date"
+  "reasons_for_absence",
+  "if_any_other_please_specify"
  ],
  "fields": [
   {
@@ -38,7 +40,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "District",
-   "options": "MBTC_AS_District",
+   "options": "MBTC AS Master District",
    "reqd": 1
   },
   {
@@ -47,7 +49,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Block",
-   "options": "MBTC_AS_Block",
+   "options": "MBTC AS Master Block",
    "reqd": 1
   },
   {
@@ -74,9 +76,9 @@
   },
   {
    "fieldname": "designation",
-   "fieldtype": "Link",
+   "fieldtype": "Select",
    "label": "Designation",
-   "options": "MBTC_Designation"
+   "options": "\nMaster Trainer\nPE Teacher\nOther Subject Teacher"
   },
   {
    "fieldname": "attendance_status",
@@ -89,7 +91,7 @@
    "fieldname": "school_name",
    "fieldtype": "Link",
    "label": "School_Name",
-   "options": "MBTC_AS_School",
+   "options": "MBTC AS Master School",
    "reqd": 1
   },
   {
@@ -104,11 +106,24 @@
    "label": "Batch No",
    "options": "\nBatch 1\nBatch 2\nBatch 3\nBatch 4\nBatch 5",
    "reqd": 1
+  },
+  {
+   "depends_on": "eval: doc.attendance_status == 'Absent'",
+   "fieldname": "reasons_for_absence",
+   "fieldtype": "Select",
+   "label": "Reasons for Absence",
+   "options": "\nSick Leave\nPersonal Work\nOfficial Duty\nWeather Related Issues\nAny Other"
+  },
+  {
+   "depends_on": "eval: doc.reasons_for_absence == 'Any Other'",
+   "fieldname": "if_any_other_please_specify",
+   "fieldtype": "Data",
+   "label": "If any other, Please specify"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-16 12:28:37.419497",
+ "modified": "2023-11-17 14:54:27.729490",
  "modified_by": "Administrator",
  "module": "Mod TeacherBot Assam",
  "name": "MBTC_Attendance Tool Participant",

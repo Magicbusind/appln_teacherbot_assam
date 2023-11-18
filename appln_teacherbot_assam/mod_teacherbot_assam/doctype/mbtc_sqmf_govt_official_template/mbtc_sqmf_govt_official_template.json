@@ -32,7 +32,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "District",
-   "options": "MBTC_AS_District",
+   "options": "MBTC AS Master District",
    "reqd": 1
   },
   {
@@ -41,7 +41,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Block",
-   "options": "MBTC_AS_Block",
+   "options": "MBTC AS Master Block",
    "reqd": 1
   },
   {
@@ -53,14 +53,14 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "School Name",
-   "options": "MBTC_AS_School",
+   "options": "MBTC AS Master School",
    "reqd": 1
   },
   {
    "fieldname": "class",
    "fieldtype": "Link",
    "label": "Class",
-   "options": "MBTC_AS_Class",
+   "options": "MBTC AS Master Class",
    "reqd": 1
   },
   {
@@ -68,7 +68,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Session Code",
-   "options": "MBTC_AS_Session Code",
+   "options": "MBTC AS Master Session Code",
    "reqd": 1
   },
   {
@@ -139,7 +139,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-09 17:17:53.350935",
+ "modified": "2023-11-17 14:55:13.262055",
  "modified_by": "Administrator",
  "module": "Mod TeacherBot Assam",
  "name": "MBTC_SQMF Govt official template",
