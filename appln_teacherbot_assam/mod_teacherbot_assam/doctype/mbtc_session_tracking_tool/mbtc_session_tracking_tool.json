@@ -18,11 +18,11 @@
   "contact_number_of_teacher_whatsapp_number_preferable",
   "column_break_wtuk",
   "block_name",
-  "emp_id",
+  "teacher_name",
   "section",
   "column_break_lpjf",
   "school_name_and_code",
-  "teacher_name",
+  "emp_id",
   "teacher_subject_you_teach",
   "section_break_rxim",
   "session_planned_in_month",
@@ -101,7 +101,7 @@
    "fieldtype": "Column Break"
   },
   {
-   "depends_on": "eval:doc.district_name",
+   "depends_on": "eval:doc.district_name\n",
    "fieldname": "block_name",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -177,7 +177,8 @@
    "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n",
    "fieldname": "girls_enrolled_in_class",
    "fieldtype": "Int",
-   "label": "Total girls enrolled in the class "
+   "label": "Total girls enrolled in the class ",
+   "mandatory_depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n"
   },
   {
    "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n",
@@ -199,13 +200,15 @@
    "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n",
    "fieldname": "boys_enrolled_in_class",
    "fieldtype": "Int",
-   "label": "Total boys enrolled in the class"
+   "label": "Total boys enrolled in the class",
+   "mandatory_depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n"
   },
   {
    "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n",
    "fieldname": "boys_attended_headcount",
    "fieldtype": "Int",
-   "label": "No. of boys attended the session headcount"
+   "label": "No. of boys attended the session headcount",
+   "mandatory_depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n"
   },
   {
    "fieldname": "amended_from",
@@ -246,7 +249,8 @@
    "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n",
    "fieldname": "duration_of_the_session_in_minutes",
    "fieldtype": "Duration",
-   "label": "Duration of the session (in minutes)"
+   "label": "Duration of the session (in minutes)",
+   "mandatory_depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n"
   },
   {
    "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session postponed'\n",
@@ -256,10 +260,10 @@
    "options": "MBTC_AS_Master_Postponed Reason"
   },
   {
-   "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session postponed'\n",
    "fieldname": "if_postponed__what_is_the_updated_planned_date",
    "fieldtype": "Date",
-   "label": "If postponed , what is the updated planned date"
+   "label": "If postponed , what is the updated planned date",
+   "mandatory_depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n"
   },
   {
    "fieldname": "teacher_subject_you_teach",
@@ -332,7 +336,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-11-18 15:40:40.873895",
+ "modified": "2023-11-18 21:31:30.230508",
  "modified_by": "Administrator",
  "module": "Mod TeacherBot Assam",
  "name": "MBTC_Session Tracking Tool",
