@@ -14,16 +14,16 @@
   "end",
   "section_break_dasx",
   "district_name",
-  "class",
+  "teacher_name",
   "contact_number_of_teacher_whatsapp_number_preferable",
   "column_break_wtuk",
   "block_name",
-  "teacher_name",
-  "section",
+  "emp_id",
+  "class",
   "column_break_lpjf",
   "school_name_and_code",
-  "emp_id",
   "teacher_subject_you_teach",
+  "section",
   "section_break_rxim",
   "session_planned_in_month",
   "column_break_iffd",
@@ -164,10 +164,11 @@
    "fieldtype": "Section Break"
   },
   {
-   "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'",
+   "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n",
    "fieldname": "session_held_date",
    "fieldtype": "Date",
-   "label": "Session Held Date"
+   "label": "Session Held Date",
+   "mandatory_depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n"
   },
   {
    "fieldname": "section_break_thfe",
@@ -184,7 +185,8 @@
    "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n",
    "fieldname": "girls_attended_headcount",
    "fieldtype": "Int",
-   "label": "No. of girls attended the session headcount"
+   "label": "No. of girls attended the session headcount",
+   "mandatory_depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n"
   },
   {
    "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n",
@@ -257,9 +259,11 @@
    "fieldname": "reason_for_postponing",
    "fieldtype": "Link",
    "label": "Reason for postponing",
+   "mandatory_depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session postponed'\n",
    "options": "MBTC_AS_Master_Postponed Reason"
   },
   {
+   "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n",
    "fieldname": "if_postponed__what_is_the_updated_planned_date",
    "fieldtype": "Date",
    "label": "If postponed , what is the updated planned date",
@@ -269,8 +273,7 @@
    "fieldname": "teacher_subject_you_teach",
    "fieldtype": "Select",
    "label": "Teacher (Subject you teach)",
-   "options": "\nPET\nOther Subject",
-   "reqd": 1
+   "options": "\nPET\nOther Subject"
   },
   {
    "fieldname": "required_material_available_for_the_session",
@@ -337,7 +340,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-11-20 09:59:14.009041",
+ "modified": "2023-11-20 20:38:17.503781",
  "modified_by": "Administrator",
  "module": "Mod TeacherBot Assam",
  "name": "MBTC_Session Tracking Tool",

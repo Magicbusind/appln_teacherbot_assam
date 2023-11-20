@@ -16,3 +16,4 @@ def get_school(district_name, block_name):
         f"""select name from `tabMBTC_AS_Master_School` where district = '{district_name}' and block = '{block_name}'""", as_dict=1)
     return '\n' + '\n'.join(data_item['name'] for data_item in dd)
 
+

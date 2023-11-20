@@ -16,3 +16,9 @@ def get_school(district_name, block_name):
         f"""select name from `tabMBTC_AS_Master_School` where district = '{district_name}' and block = '{block_name}'""", as_dict=1)
     return '\n' + '\n'.join(data_item['name'] for data_item in dd)
 
+@frappe.whitelist(allow_guest=True)
+def validate_planned_session(session_in_month):
+    session_planned_in_month = frappe.db.get_single_value("TeacherBot Assam Settings", "session_planned_in_month")
+    if int(session_in_month) >  int(session_planned_in_month):
+         return {"flag": False, "session_planned_in_month": session_planned_in_month}
+    return {"flag": True, "session_planned_in_month": session_planned_in_month}
