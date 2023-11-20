@@ -18,7 +18,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2023-11-20 11:28:05.031186",
+ "modified": "2023-11-20 12:06:20.164966",
  "modified_by": "Administrator",
  "module": "Mod TeacherBot Assam",
  "name": "session-tracking-tool",
@@ -528,6 +528,41 @@
    "options": "\nYes\nNo",
    "read_only": 0,
    "reqd": 1,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "column_break_kfpo",
+   "fieldtype": "Column Break",
+   "hidden": 0,
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "column_break_fkwk",
+   "fieldtype": "Column Break",
+   "hidden": 0,
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "hidden": 0,
+   "label": "Amended From",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "MBTC_Session Tracking Tool",
+   "read_only": 1,
+   "reqd": 0,
    "show_in_filter": 0
   }
  ]
