@@ -18,7 +18,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2023-11-20 11:50:43.951460",
+ "modified": "2023-11-20 14:06:22.455048",
  "modified_by": "Administrator",
  "module": "Mod TeacherBot Assam",
  "name": "assam-school-details",
@@ -38,7 +38,7 @@
    "label": "District",
    "max_length": 0,
    "max_value": 0,
-   "options": "MBTC_AS_District",
+   "options": "MBTC_AS_Master_District",
    "read_only": 0,
    "reqd": 1,
    "show_in_filter": 0
