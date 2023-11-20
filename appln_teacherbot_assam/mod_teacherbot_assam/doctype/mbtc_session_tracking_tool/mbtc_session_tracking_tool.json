@@ -297,7 +297,8 @@
    "depends_on": "eval: doc.reason_for_postponing == 'Any other'\n",
    "fieldname": "if_any_other_please_explain",
    "fieldtype": "Data",
-   "label": "If any other, please explain"
+   "label": "If any other, please explain",
+   "mandatory_depends_on": "eval: doc.reason_for_postponing == 'Any other'\n"
   },
   {
    "fieldname": "column_break_upxg",
@@ -336,7 +337,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-11-18 21:31:30.230508",
+ "modified": "2023-11-20 09:59:14.009041",
  "modified_by": "Administrator",
  "module": "Mod TeacherBot Assam",
  "name": "MBTC_Session Tracking Tool",
