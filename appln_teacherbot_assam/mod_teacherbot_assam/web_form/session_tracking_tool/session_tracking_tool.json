@@ -18,7 +18,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2023-11-20 20:40:41.338815",
+ "modified": "2023-11-21 09:31:01.838069",
  "modified_by": "Administrator",
  "module": "Mod TeacherBot Assam",
  "name": "session-tracking-tool",
@@ -197,7 +197,7 @@
    "max_value": 0,
    "options": "\nPET\nOther Subject",
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -416,6 +416,7 @@
    "fieldtype": "Int",
    "hidden": 0,
    "label": "No. of students who completed the Magicsheets",
+   "mandatory_depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n",
    "max_length": 0,
    "max_value": 0,
    "read_only": 0,

@@ -192,7 +192,8 @@
    "depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n",
    "fieldname": "students_completed_magicsheets",
    "fieldtype": "Int",
-   "label": "No. of students who completed the Magicsheets"
+   "label": "No. of students who completed the Magicsheets",
+   "mandatory_depends_on": "eval: doc.session_delivery_status_as_per_the_plan == 'Session held'\n"
   },
   {
    "fieldname": "column_break_rlkm",
@@ -273,7 +274,8 @@
    "fieldname": "teacher_subject_you_teach",
    "fieldtype": "Select",
    "label": "Teacher (Subject you teach)",
-   "options": "\nPET\nOther Subject"
+   "options": "\nPET\nOther Subject",
+   "reqd": 1
   },
   {
    "fieldname": "required_material_available_for_the_session",
@@ -340,7 +342,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-11-20 20:38:17.503781",
+ "modified": "2023-11-21 09:29:41.828688",
  "modified_by": "Administrator",
  "module": "Mod TeacherBot Assam",
  "name": "MBTC_Session Tracking Tool",
